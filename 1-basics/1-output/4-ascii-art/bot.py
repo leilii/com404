@@ -9,4 +9,12 @@ print("\t ########")
 print("\t #      # ")
 print("\t #      # ")
 print("\t #      # ")
-print("\t ######## ")
+print("\t ######## ")	
+# Display an asci robot using long sting
+print("""
+########
+#      #
+#      #
+#      #
+########
+""")
