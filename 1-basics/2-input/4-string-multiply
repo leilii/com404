@@ -1,0 +1,7 @@
+print("Please inter the number o lives")
+lives=int(input())
+print("Please inter the energy level")
+energy=int(input())
+print("Please inter the print shield level")
+shield=int(input())
+print("lives:", "נ"*lives)
