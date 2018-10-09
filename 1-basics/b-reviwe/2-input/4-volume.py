@@ -10,10 +10,10 @@ Radius=float(input())
 print("Please enter a hight")
 Hight=float(input())
 
-V1 = math.pi *(pow(radius, 2))*Hight
+V1 = (math.pi *(pow(radius, 2))* Hight
 #decide if the sape is cylander
-if (shape=="cy"):
-   print("The volum of the cylander with" + str(Radius)+"and hight"+Hight +"is"+round(V1,2))
+if(shape=="cy"):
+  print("The volum of the cylander with" + str(Radius)+"and hight"+Hight +"is"+round(V1,2))
 elif(shap=="co"): 
-   V2=V1/3
-  print("The volum of the cone with" + str(Radius)+"and hight"+Hight "is"+round(V2,2))
+  V2=V1/3
+  print("The volum of the cone with" + str(Radius)+ "and hight"+Hight +"is" + round(V2,2))
