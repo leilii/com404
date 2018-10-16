@@ -7,7 +7,6 @@ def run():
   num2=int(input())
 
   for i in range(0,num1,1):
-     m=num2*i
      if (i+1%num2==0):
       print(cha,end="")
      else:
