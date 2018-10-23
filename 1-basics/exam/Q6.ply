@@ -1,0 +1,29 @@
+def  is_slow_zombie(speed):
+  if speed<5:
+    return(True)
+  else:
+    return(False) 
+
+def take_action(mutation,speed):
+  if  is_slow_zombie(speed) is True:
+      return( "This",mutation," zombie is a slow zombie. You can run around it!" ) 
+
+  else:
+    return("This ",mutation," zombie is a fast zombie. You better hide!")
+
+def run():
+   print("Please enter the mutation type:")
+   mutation=input()
+   print("Please enter the speed of zombie")
+   speed=int(input())
+   print("Please enter the identify or action:")
+   response=input()
+   if response=="identify":
+      print("A slow zombie:",is_slow_zombie(speed))
+   elif response=="action":
+       take_action(mutation,speed) 
+   else:
+     print("Unknown zombie!")
+      
+
+run()   
