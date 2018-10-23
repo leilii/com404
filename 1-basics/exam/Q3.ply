@@ -1,0 +1,8 @@
+print(  "How many days remain until the next full moon?")
+whole_number=int(input())
+print("We must count the days...")
+ 
+for whole_number in range(whole_number,0,-1):
+  print("The full moon will be upon us in",whole_number,"days")
+print("It's a full moon. The beast has been unleashed!")
+print("May it have mercy on our souls.")  
