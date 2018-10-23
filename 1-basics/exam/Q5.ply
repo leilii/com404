@@ -1,0 +1,18 @@
+deadends=0
+mummies=0
+print( "Escaping the tomb...\n")
+for i in range(0,4,1):
+  print("")
+  print( "What lies before me?")
+  response=input()
+  if response=="a dead end":
+    deadends+=1
+    print("Time to turn back.")
+  elif response=="a mummy":
+    mummies+=1
+    print("Better find another way." )
+  else:
+    print("Let's move around it.")
+  
+
+print("Encountered ",deadends," dead ends and " ,mummies, " mummies.")
