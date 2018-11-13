@@ -1,0 +1,77 @@
+from tkinter import *
+
+class NewsletterGui(Tk):
+   
+    def __init__(self):
+        super().__init__()
+        
+        # set window attributes
+        self.title("Gui")
+         
+        self.configure(bg="#eee",
+                        height=500, 
+                        width=500)
+
+        
+        # add components
+        self.add_heading_label()
+        self.add_instruction_label()
+        self.add_lyric_add_entry()
+        self.add_lyric_label()
+        self.add_list_box()
+        
+        
+    def add_heading_label(self):
+        #creat
+        self.heading_label = Label()
+        self.heading_label.pack(fill=X)
+        # style
+        self.heading_label.configure(font="Arial 20",
+                                     text="Song Maker")
+          
+    def add_instruction_label(self):
+                #creat
+        self.instruction_label = Label()
+        self.instruction_label.pack()
+          # style
+        self.instruction_label.configure(font="Arial 18",
+                                           text="Lyric to add:")
+        
+    def add_lyric_add_entry(self):
+                                 
+        #creat
+        self.mainframe=Frame()
+        self.mainframe.pack(fill=X)
+        self.lyric_entry=Entry()
+        self.lyric_entry.pack(side=LEFT)
+        self.lyric_entry.configure(bd=2)
+            #style
+        self.lyric_entry.configure(width=50)
+        self.add_button=Button()
+        self.add_button.pack(side=LEFT)
+        self.add_button.configure(text="Add",bg="grey",font="Arial 12",bd=2)
+             # bind events
+        self.add_button.bind("<ButtonRelease-1>", self.add_button_clicked)
+    def add_lyric_label(self):
+                #creat
+        self.lyric_label = Label()
+        self.lyric_label.pack()
+          # style
+        self.lyric_label.configure(font="Arial 18",
+                                           text="Lyric:")        
+      
+
+    def add_list_box(self):
+        #creat
+        self.list_box=Listbox()
+        self.list_box.pack()
+        
+          
+        #style
+
+        
+        
+ 
+    def add_button_clicked(self, event):
+        mytext=self.lyric_entry.get()
+        self.list_box.insert(END,mytext)
