@@ -1,0 +1,66 @@
+from tkinter import *
+
+class NewsletterGui(Tk):
+    
+    def __init__(self):
+        super().__init__()
+        
+        # set window attributes
+        self.title("Gui")
+         
+        self.configure(bg="#eee",
+                        height=500, 
+                     width=500)
+
+        
+        # add components
+        self.add_heading_label()
+        self.add_instruction_label()
+        self.add_tickets_entry()
+        self.add_submit_button()
+        
+    def add_heading_label(self):
+        #creat
+        self.heading_label = Label()
+        self.heading_label.pack(fill=X)
+        # style
+        self.heading_label.configure(font="Arial 24",
+                                     text="Entrance Ticket")
+          
+    def add_instruction_label(self):
+                #creat
+        self.instruction_label = Label()
+        self.instruction_label.pack()
+          # style
+        self.instruction_label.configure(font="Arial 18",
+                                           text="How many tickets are needed?")
+        
+    def add_tickets_entry(self):
+        #creat
+        self.tickets_entry=Entry()
+        self.tickets_entry.pack()
+            #style
+        self.tickets_entry.configure(width=50)
+                 
+        
+    def add_submit_button(self):
+        #creat
+        self.submit_button=Button()
+        self.submit_button.pack()
+        #style
+
+        self.submit_button.configure(text="Buy",bg="pink",font="Arial 20")
+             # bind events
+        self.submit_button.bind("<ButtonRelease-1>", self.submit_button_clicked)
+        
+ 
+    def submit_button_clicked(self, event):
+           print("You Have Got Tickets")
+           
+           
+           
+           
+     # the main file
+     from newsletter import NewsletterGui
+gui=NewsletterGui()
+gui.mainloop()
