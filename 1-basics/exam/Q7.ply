@@ -1,38 +1,48 @@
-print("Please enter a message:")
-message=input()
-m_length="" 
-for i in range(0,len(message),1):
-   m_length+="-"
-print("Please select an option:")
-print("1) Under - display the word")
-print("2")
-print("3")
-print("4")
-option=int(input())
-
-if option==1:
- print("Halloween")
- print(m_length)
+message="" 
+m_length=""
+def under(message,m_length): 
+ print("Halloween") 
+ print(m_length) 
  print(message) 
-
-elif  option==2:
-   print(message) 
-   print(m_length)
-   print("Halloween")  
-
-elif option==3:  
-  print(message) 
-  print(m_length)
-  print("Halloween")
-  print(m_length)
-  print(message)
-elif option==4:
-  if   len(message)<5:
-       message_le=len(message) 
-  else:
-       message_le=5  
-  myline=""     
-  for i in range(0,message_le+1,1): 
-      for j in range(0,message_le,1):
-          myline+="Halloween | "
-  print(myline)     
+def over(message,m_length):
+ print(message) 
+ print(m_length) 
+ print("Halloween") 
+def both(message,m_length):
+ print(message)
+ print(m_length) 
+ under(message,m_length)
+def grid(message,m_length):
+  if len(message)<5: 
+   message_le=len(message) 
+  else: 
+   message_le=5 
+  myline=""
+  for j in range(1,message_le,1): 
+       myline+="Halloween | "
+  myline+="Halloween"      
+  for i in range(0,message_le,1):   
+    print(myline)   
+def halloween():
+  print("Please enter a message:") 
+  message=input()
+  print("")
+  m_length=""
+  for i in range(0,len(message),1): 
+   m_length+="-" 
+  print("Please select an option:") 
+  print("")
+  print("1) Under - display the word") 
+  print("2) Over - display the message with a line under it followed by the word Halloween") 
+  print("3) Both - display the message above and below the word Halloween") 
+  print("4) Grid - display the word Halloween in a grid")
+  option=int(input()) 
+  if option==1:
+    under(message,m_length)
+  elif option==2: 
+    over(message,m_length)
+  elif option==3: 
+    both(message,m_length)
+  elif option==4: 
+    grid(message,m_length)       
+halloween()  
